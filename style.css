@@ -1,0 +1,114 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: lightblue;
+}
+
+.bintik {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgba(234, 208, 17, 0.9);
+  animation: berkedip 1s infinite alternate;
+}
+
+@keyframes berkedip {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.moonstar {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(237, 245, 14, 0.902);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: gerakan 10s linear infinite alternate;
+}
+
+@keyframes gerakan {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateX(200vw) translateY(200vh) rotate(360deg);
+  }
+}
+
+.pesan {
+  background-color: rgb(118, 126, 128);
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.pesan.show {
+  opacity: 1;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+  position: relative;
+}
+
+.slide img {
+  max-width: 300px;
+  height: 200px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.gambar-slide {
+  width: 100px;
+  height: 50px;
+}
+
+.slide img.header-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.card {
+  background-color: silver;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.card h1 {
+  color: rgb(6, 110, 246);
+}
+
+.card p {
+  color: black;
+}
